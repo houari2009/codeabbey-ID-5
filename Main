@@ -1,0 +1,16 @@
+
+
+
+import re
+
+val=input()
+
+list=[]
+
+for i in range(0, int(val)):
+   valx=input()
+   list.append(re.findall(r'-?\d+\.?\d*', valx))
+for i in range(0, len(list)):
+   list[i]=map(int, list[i])
+for i in range(0, len(list)):
+   print(min(list[i]))
